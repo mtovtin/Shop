@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <%= link_to "Home", root_path,class:"navbar-brand"%>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%=link_to "Каталог", products_path, class:"nav-link"%>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        <span id="cart" onclick="show_cart()">Кошик</span>
+      </span>
+
+
+    </div>
+  </div>
+</nav>
+<div class="modal fade" id="cart_modal" tabindex="-1" aria-labelledby="cart_modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content modal-dialog-scrollable">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cart_modalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body row" id="cart_body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <%= link_to "Order", new_order_path,class:"btn btn-succsess"%>
+      </div>
+    </div>
+  </div>
+</div>

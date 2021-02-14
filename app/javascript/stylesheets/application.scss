@@ -1,0 +1,28 @@
+@import "bootstrap";
+@import "toastr";
+
+.container {
+  min-height: 89vh;
+}
+
+.cart-product {
+  min-height: 500px;
+}
+
+.product {
+  img {
+    max-height: 50vh;
+  }
+
+  .title {
+    color: red;
+  }
+}
+
+#cart {
+  &:hover {
+    color: white;
+    border: 1px solid blue;
+    cursor: pointer;
+  }
+}
